@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyr1k6mk28gkn"]
+[gd_scene load_steps=4 format=3 uid="uid://dyr1k6mk28gkn"]
 
 [ext_resource type="LabelSettings" uid="uid://cgx1vwrn0dldu" path="res://Resources/TitleLabel_72.tres" id="1_p8rbg"]
 [ext_resource type="PackedScene" uid="uid://brookpjxsbfxc" path="res://Scenes/LevelButton/LevelButton.tscn" id="2_qtv3y"]
+[ext_resource type="PackedScene" uid="uid://tmequ7cy05ee" path="res://Scenes/FontSprite/FontSprite.tscn" id="3_cmk6n"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -22,11 +23,21 @@ color = Color(0.0941176, 0.356863, 0.843137, 0.152941)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -414.0
+offset_top = -398.5
+offset_right = 414.0
+offset_bottom = 398.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Spacer4" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -35,6 +46,10 @@ text = "Memory Madness
 label_settings = ExtResource("1_p8rbg")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 132)
+layout_mode = 2
 
 [node name="HBLevelButtons" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -65,5 +80,30 @@ level_number = 5
 layout_mode = 2
 level_number = 6
 
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="HBoxSprites" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 48
+
+[node name="FontSprite" parent="VBoxContainer/HBoxSprites" instance=ExtResource("3_cmk6n")]
+layout_mode = 2
+
+[node name="FontSprite2" parent="VBoxContainer/HBoxSprites" instance=ExtResource("3_cmk6n")]
+layout_mode = 2
+
+[node name="FontSprite3" parent="VBoxContainer/HBoxSprites" instance=ExtResource("3_cmk6n")]
+layout_mode = 2
+
+[node name="FontSprite4" parent="VBoxContainer/HBoxSprites" instance=ExtResource("3_cmk6n")]
+layout_mode = 2
+
+[node name="FontSprite5" parent="VBoxContainer/HBoxSprites" instance=ExtResource("3_cmk6n")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
