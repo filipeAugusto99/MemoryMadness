@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://h6rqacu7ogyf"]
 
 [ext_resource type="Script" uid="uid://jeseoyel6e0h" path="res://Scenes/Game/Game.gd" id="1_3k6gv"]
-[ext_resource type="Texture2D" uid="uid://dp02v5kvh42yj" path="res://assets/frames/hidden_frame_blank.png" id="1_gwu2e"]
+[ext_resource type="PackedScene" uid="uid://hyhkld4mdytb" path="res://Scenes/MemoryTile/MemoryTile.tscn" id="2_3k6gv"]
 [ext_resource type="LabelSettings" uid="uid://665wpx3w880s" path="res://Resources/WhiteLabel_24.tres" id="2_xbxml"]
 [ext_resource type="LabelSettings" uid="uid://b86kac1ygybrq" path="res://Resources/DarkLevel_24.tres" id="2_y3kpf"]
 [ext_resource type="Texture2D" uid="uid://gqy3gookh41s" path="res://assets/ui/blue_button00.png" id="3_ln2h6"]
@@ -28,71 +28,18 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
 columns = 6
 
-[node name="TextureRect" type="TextureRect" parent="HB/GridContainer"]
+[node name="MemoryTile" parent="HB/GridContainer" instance=ExtResource("2_3k6gv")]
 layout_mode = 2
-texture = ExtResource("1_gwu2e")
 
-[node name="TextureRect2" type="TextureRect" parent="HB/GridContainer"]
+[node name="MemoryTile2" parent="HB/GridContainer" instance=ExtResource("2_3k6gv")]
 layout_mode = 2
-texture = ExtResource("1_gwu2e")
 
-[node name="TextureRect3" type="TextureRect" parent="HB/GridContainer"]
+[node name="MemoryTile3" parent="HB/GridContainer" instance=ExtResource("2_3k6gv")]
 layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect4" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect5" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect6" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect7" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect8" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect9" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect10" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect11" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect12" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect13" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect14" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect15" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
-
-[node name="TextureRect16" type="TextureRect" parent="HB/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_gwu2e")
 
 [node name="MC" type="MarginContainer" parent="HB"]
 custom_minimum_size = Vector2(200, 0)

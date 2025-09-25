@@ -9,6 +9,7 @@ extends Control
 func _ready() -> void:
 	on_game_exit_pressed()
 
+
 func _enter_tree() -> void:
 	SignalHub.on_level_selected.connect(on_level_selected)
 	SignalHub.on_game_exit_pressed.connect(on_game_exit_pressed)
