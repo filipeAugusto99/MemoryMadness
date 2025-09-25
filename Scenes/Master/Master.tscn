@@ -27,8 +27,8 @@ expand_mode = 1
 [node name="Music" type="AudioStreamPlayer" parent="."]
 
 [node name="Main" parent="." instance=ExtResource("3_7tgqy")]
-visible = false
 layout_mode = 1
 
 [node name="Game" parent="." instance=ExtResource("4_1t0lv")]
+visible = false
 layout_mode = 1
