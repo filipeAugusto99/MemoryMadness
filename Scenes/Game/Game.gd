@@ -5,6 +5,8 @@ const MEMORY_TILE = preload("res://Scenes/MemoryTile/MemoryTile.tscn")
 
 
 @onready var tile_grid: GridContainer = $HB/TileGrid
+@onready var sound: AudioStreamPlayer = $Sound
+@onready var scorer: Scorer = $Scorer
 
 
 func _ready() -> void:
@@ -31,9 +33,10 @@ func on_level_selected(level_num: int) -> void:
 	for im in lds.get_selected_images():
 		add_memory_tile(im, fi)
 		
+	scorer.clear_new_game(lds.get_target_pairs())
 	
 func _on_exit_button_pressed() -> void:
 	for t in tile_grid.get_children():
 		t.queue_free()
-		
+	SoundManager.play_button_click(sound)
 	SignalHub.emit_on_game_exit_pressed()
